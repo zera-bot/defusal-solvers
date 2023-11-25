@@ -62,6 +62,9 @@ def parseInput(inp:str):
     if intention == "tiles":
         return solveTiles(inputs)
     
+    if intention == "morse":
+        return translateMorse(inputs)
+    
     if intention == "serial":
         return findMorseSerial(l[1])
 

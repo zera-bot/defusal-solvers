@@ -179,3 +179,13 @@ def findMorseSerial(serial:str):
     if "6" in serial or "D" in serial or "8" in serial: return "blue"
     if "I" in serial or "1" in serial: return "yellow"
     return "blue"
+
+def translateMorse(code):
+    translationDict = {".-":"a", "-...":"b", "-.-.":"c", "-..":"d", ".":"e", "..-.":"f", "--.":"g", "....":"h", "..":"i", ".---":"j",
+                       "-.-":"k", ".-..":"l", "--":"m", "-.":"n", "---":"o", ".--.":"p", "--.-":"q", ".-.":"r", "...":"s", "-":"t",
+                       "..-":"u", "...-":"v", ".--":"w" ,"-..-":"x", "-.--":"y", "--..":"z"}
+    
+    s = ""
+    for i in code:
+        s+=translationDict[i]
+    return s
