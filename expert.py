@@ -26,7 +26,8 @@ def parseInput(inp:str):
         return solveKeypads(inputs)
     
     if intention == "binary" or intention == "b" or intention == "bin":
-        lit = [int(k) for k in inputs]
+        if len(inputs) == 1: lit = [*inputs[0]]
+        else: lit = [int(k) for k in inputs]
         if lit[0] == 0: lit = []
         return solveBinary(lit)
     
